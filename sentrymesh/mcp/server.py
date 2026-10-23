@@ -5,7 +5,7 @@ import time
 from typing import Any, Dict, List, Optional
 from fastapi import FastAPI, Request, Response, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
 from sentrymesh.agent.core import SentryMeshAgent
@@ -250,6 +250,15 @@ async def mcp_streamable_endpoint(request: Request):
 
 
 # REST endpoints for UI simulator
+@app.get("/")
+@app.get("/dashboard")
+def serve_dashboard():
+    html_path = os.path.join(os.path.dirname(__file__), "..", "..", "web", "index.html")
+    if os.path.exists(html_path):
+        return FileResponse(html_path)
+    return {"message": "SentryMesh MCP Server active. Web dashboard not found."}
+
+
 class EvaluateRequest(BaseModel):
     visitor_input: str
     badge_scanned: bool = False
