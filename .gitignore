@@ -49,6 +49,10 @@ raw_demo_video.mp4
 # Test suites ignored per production distribution requirements
 tests/
 
+# Runtime data and audit logs
+sentrymesh/data/
+*.jsonl
+
 # System files
 .DS_Store
 Thumbs.db
