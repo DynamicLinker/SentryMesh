@@ -1,19 +1,19 @@
 1
-00:00:00,800 --> 00:00:13,360
+00:00:00,500 --> 00:00:12,560
 Connecting conversational AI to physical smart locks creates a serious security risk.
 
 2
-00:00:16,000 --> 00:00:30,400
+00:00:12,560 --> 00:00:26,960
 SentryMesh adds a sub-120ms Strands Decider 2B reflex layer before physical locks.
 
 3
-00:00:32,500 --> 00:00:45,460
+00:00:26,960 --> 00:00:39,920
 Strands Decider 2B stops prompt injection in 112ms and alerts Fire TV.
 
 4
-00:00:49,500 --> 00:01:02,540
+00:00:39,920 --> 00:00:52,960
 Verified couriers are grounded in 112ms; Bedrock confirms entry via Ring audio.
 
 5
-00:01:05,500 --> 00:01:16,700
+00:00:52,960 --> 00:01:04,160
 Decider 2B: 12x faster, 400x cheaper, with Alexa+ Streamable MCP.

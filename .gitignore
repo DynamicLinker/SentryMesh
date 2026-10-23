@@ -45,6 +45,8 @@ yarn-error.log*
 # Video production scratch files
 voiceover_work/
 raw_demo_video.mp4
+video_frames/
+temp_video_record/
 
 # Test suites ignored per production distribution requirements
 tests/
