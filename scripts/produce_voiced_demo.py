@@ -73,16 +73,18 @@ def main():
     print("[2/5] Synthesizing authentic cloned speech clips...")
     for idx, seg in enumerate(SEGMENTS, start=1):
         out_wav = os.path.join(WORK_DIR, f"{seg['id']}.wav")
-        wav = model.generate(
-            seg["text"],
-            audio_prompt_path=AUDIO_PROMPT_PATH,
-            cfg_weight=0.55,
-            exaggeration=0.40,
-            temperature=0.70,
-            repetition_penalty=1.1,
-        )
-        ta.save(out_wav, wav, sr)
-        duration = wav.shape[1] / float(sr)
+        if not os.path.exists(out_wav):
+            wav = model.generate(
+                seg["text"],
+                audio_prompt_path=AUDIO_PROMPT_PATH,
+                cfg_weight=0.55,
+                exaggeration=0.40,
+                temperature=0.70,
+                repetition_penalty=1.1,
+            )
+            ta.save(out_wav, wav, sr)
+        wav, clip_sr = ta.load(out_wav)
+        duration = wav.shape[1] / float(clip_sr)
 
         clip_records.append({
             "path": out_wav,
