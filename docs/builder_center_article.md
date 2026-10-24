@@ -120,7 +120,7 @@ def execute_tool_safely(tool_name: str, tool_args: dict, user_prompt: str):
 ```
 
 Full source code, reproducible benchmarks, and the interactive simulator are available on GitHub:  
-**Repo:** [https://github.com/DynamicLinker/AMAZON](https://github.com/DynamicLinker/AMAZON)
+**Repo:** [https://github.com/DynamicLinker/SentryMesh](https://github.com/DynamicLinker/SentryMesh)
 
 ---
 
