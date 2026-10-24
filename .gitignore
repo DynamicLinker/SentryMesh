@@ -42,11 +42,14 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Video production scratch files
+# Video and audio production scratch files
 voiceover_work/
 raw_demo_video.mp4
 video_frames/
 temp_video_record/
+*.mp4
+*.srt
+*.wav
 
 # Test suites ignored per production distribution requirements
 tests/
